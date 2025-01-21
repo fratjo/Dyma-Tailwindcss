@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/87d1d19a8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="/src/main.js" defer></script>
+    <title>Saasy</title>
+  </head>
+  <body class="text-slate-600">
+    <div
+      id="app"
+      class="min-h-screen bg-gradient-to-r from-sky-500 to-purple-500 p-8"
+    >
+      <div class="container mx-auto min-h-screen rounded-2xl bg-white">
+        <header class="grid grid-cols-3 items-center border-b px-12 py-8">
+          <img src="./public/vite.svg" alt="logo" class="w-10" />
+          <ul class="flex items-center justify-center gap-x-8">
+            <a href="#" class="font-bold hover:text-sky-500">Home</a>
+            <a href="#" class="font-bold hover:text-sky-500">Invoices</a>
+            <a href="#" class="font-bold hover:text-sky-500">Clients</a>
+            <a href="#" class="font-bold hover:text-sky-500">Expenses</a>
+          </ul>
+          <ul class="flex items-center justify-end gap-x-8">
+            <li>
+              <i class="fa-regular fa-bell fa-lg text-slate-400"></i>
+            </li>
+            <li>
+              <div class="h-8 w-8 rounded-full bg-blue-500"></div>
+            </li>
+          </ul>
+        </header>
+        <div
+          id="menu"
+          class="flex items-center justify-between border-b px-12 py-8 font-bold"
+        >
+          <ul class="flex items-center">
+            <li class="border-r pr-3 text-slate-950">Cashflow</li>
+            <a href="#" class="px-3 hover:text-sky-500">Last 7 days</a>
+            <a href="#" class="px-3 hover:text-sky-500">Last 30 days</a>
+            <a href="#" class="px-3 hover:text-sky-500">All-time</a>
+          </ul>
+          <button
+            class="rounded-lg bg-sky-500 px-4 py-2 text-white hover:bg-sky-600 active:bg-sky-700"
+          >
+            + New Invoice
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
