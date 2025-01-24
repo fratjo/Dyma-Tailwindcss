@@ -17,40 +17,46 @@
     ></script>
     <title>Document</title>
   </head>
-  <body class="min-h-screen relative scroll-smooth">
-    <a class="fixed bottom-10 right-3 cursor-pointer" href="#top">
+  <body class="relative min-h-screen scroll-smooth">
+    <a
+      class="fixed bottom-10 right-3 hidden cursor-pointer md:flex"
+      href="#top"
+    >
       <i
-        class="fa-solid fa-chevron-up text-white bg-black rounded-full p-2"
+        class="fa-solid fa-chevron-up rounded-full bg-black p-2 text-white"
       ></i>
     </a>
     <div>
-      <p class="bg-black text-white text-center p-1">
+      <p class="bg-black p-1 text-center text-xs text-white md:text-base">
         Get 25% Off this summer Sale. Grap it fast !!
         <strong>3 days left !</strong>
       </p>
     </div>
-    <div class="container justify-center items-center mx-auto">
-      <header class="py-4" id="top">
-        <nav class="flex flex-row justify-between items-center relative">
-          <ul class="flex flex-row gap-x-4 p-1">
-            <li class="hover:text-black text-gray-400 cursor-pointer mr-2">
+    <div class="mx-auto items-center justify-center md:container">
+      <header
+        class="z-50 bg-white py-4 max-md:sticky max-md:top-0 max-md:border-b md:px-0"
+        id="top"
+      >
+        <nav class="relative flex flex-row items-center justify-between">
+          <ul class="hidden flex-row gap-x-4 p-1 md:flex">
+            <li class="mr-2 cursor-pointer text-gray-400 hover:text-black">
               Men
             </li>
-            <li class="hover:text-black text-gray-400 cursor-pointer px-2">
+            <li class="cursor-pointer px-2 text-gray-400 hover:text-black">
               Women
             </li>
-            <li class="hover:text-black text-gray-400 cursor-pointer px-2">
+            <li class="cursor-pointer px-2 text-gray-400 hover:text-black">
               Kids
             </li>
-            <li class="hover:text-black text-gray-400 cursor-pointer px-2">
+            <li class="cursor-pointer px-2 text-gray-400 hover:text-black">
               Gifts
             </li>
           </ul>
           <span
-            class="text-3xl font-extrabold absolute left-1/2 transform -translate-x-1/2"
-            >Diane</span
-          >
-          <ul class="flex flex-row gap-x-4 p-1">
+            class="transform pl-6 text-2xl font-extrabold md:absolute md:left-1/2 md:-translate-x-1/2 md:pl-0 md:text-3xl"
+            >Diane
+          </span>
+          <ul class="hidden flex-row gap-x-4 p-1 md:flex">
             <li class="cursor-pointer">
               <i class="fa-solid fa-magnifying-glass"></i>
             </li>
@@ -59,14 +65,42 @@
             </li>
             <li class="cursor-pointer"><i class="fa-solid fa-sign-in"></i></li>
           </ul>
+          <div class="pr-6 md:hidden" id="menuIcon">
+            <i class="fas fa-regular fa-bars fa-lg cursor-pointer"></i>
+            <i class="fas fa-regular fa-xmark fa-lg !hidden cursor-pointer"></i>
+          </div>
+          <ul
+            class="absolute left-0 top-10 hidden w-full flex-col gap-y-4 border-b bg-white *:my-2 *:py-2 *:pl-6 md:hidden"
+            id="menu"
+          >
+            <li class="border-l-2 border-black bg-gray-100">Men</li>
+            <li class="hover:border-l-2 hover:border-black hover:bg-gray-100">
+              Women
+            </li>
+            <li class="hover:border-l-2 hover:border-black hover:bg-gray-100">
+              Kids
+            </li>
+            <li class="hover:border-l-2 hover:border-black hover:bg-gray-100">
+              Gifts
+            </li>
+            <li class="hover:border-l-2 hover:border-black hover:bg-gray-100">
+              Search
+            </li>
+            <li class="hover:border-l-2 hover:border-black hover:bg-gray-100">
+              Cart
+            </li>
+            <li class="hover:border-l-2 hover:border-black hover:bg-gray-100">
+              Log in
+            </li>
+          </ul>
         </nav>
       </header>
-      <section class="mb-32">
+      <section class="mb-16 md:mb-32">
         <div
-          class="bg-[url('./assets/images/hero.jpg')] h-96 bg-cover bg-center rounded-3xl shadow-lg content-end items-end flex justify-between p-6"
+          class="flex h-96 flex-col justify-end bg-[url('./assets/images/hero.jpg')] bg-cover bg-center p-6 shadow-lg max-md:items-center md:flex-row md:content-end md:items-end md:justify-between md:rounded-3xl"
         >
           <div>
-            <h1 class="text-4xl font-bold text-white mb-3">
+            <h1 class="mb-3 text-4xl font-bold text-white">
               DIANE NATURE COLLECTION
             </h1>
             <p class="text-white">
@@ -74,31 +108,31 @@
             </p>
           </div>
           <button
-            class="cursor-pointer bg-white font-medium text-sm text-black rounded-full py-2 px-6"
+            class="w-40 cursor-pointer rounded-full bg-white px-6 py-2 text-sm font-medium text-black max-md:self-center md:w-auto md:self-end"
           >
             Shop now !
           </button>
         </div>
       </section>
       <section
-        class="mb-32 flex flex-col justify-center items-center mx-auto text-center h-screen"
+        class="mx-auto mb-16 flex flex-col items-center justify-center text-center md:mb-32 md:h-screen"
       >
-        <h2 class="text-3xl font-light mb-6">NEW COLLECTION</h2>
+        <h2 class="mb-6 text-3xl font-light">NEW COLLECTION</h2>
         <p class="text-gray-400">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
           officiis labore consequatur!
         </p>
         <ul
-          class="flex flex-wrap justify-center gap-x-4 gap-y-4 mt-8"
-          style="width: 1000px"
+          class="mt-8 grid grid-cols-1 grid-rows-6 justify-center gap-x-4 gap-y-4 sm:grid-cols-2 sm:grid-rows-3 sm:px-3 md:grid-cols-3 md:grid-rows-2 md:px-0"
+          style="max-width: 1000px"
         >
           <article
-            class="basis-60 flex flex-col gap-y-2 text-left hover:ring-1 hover:ring-gray-100 hover:bg-gray-100 p-4 rounded-3xl cursor-pointer"
+            class="flex basis-60 cursor-pointer flex-col gap-y-2 p-4 text-left hover:bg-gray-100 hover:ring-1 hover:ring-gray-100 sm:rounded-3xl"
           >
             <div
-              class="basis-60 bg-[url('./assets/images/product-1.jpg')] bg-center bg-cover rounded-3xl"
+              class="basis-60 rounded-3xl bg-[url('./assets/images/product-1.jpg')] bg-cover bg-center"
             ></div>
-            <h3 class="font-semibold text-lg">Jacket</h3>
+            <h3 class="text-lg font-semibold">Jacket</h3>
             <p class="text-sm font-light text-gray-400">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               corporis.
@@ -106,12 +140,12 @@
             <strong>$45</strong>
           </article>
           <article
-            class="basis-60 flex flex-col gap-y-2 text-left hover:ring-1 hover:ring-gray-100 hover:bg-gray-100 p-4 rounded-3xl cursor-pointer"
+            class="flex basis-60 cursor-pointer flex-col gap-y-2 p-4 text-left hover:bg-gray-100 hover:ring-1 hover:ring-gray-100 sm:rounded-3xl"
           >
             <div
-              class="basis-60 bg-[url('./assets/images/product-2.jpg')] bg-center bg-cover rounded-3xl"
+              class="basis-60 rounded-3xl bg-[url('./assets/images/product-2.jpg')] bg-cover bg-center"
             ></div>
-            <h3 class="font-semibold text-lg">T-Shirt</h3>
+            <h3 class="text-lg font-semibold">T-Shirt</h3>
             <p class="text-sm font-light text-gray-400">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               corporis.
@@ -119,12 +153,12 @@
             <strong>$45</strong>
           </article>
           <article
-            class="basis-60 flex flex-col gap-y-2 text-left hover:ring-1 hover:ring-gray-100 hover:bg-gray-100 p-4 rounded-3xl cursor-pointer"
+            class="flex basis-60 cursor-pointer flex-col gap-y-2 p-4 text-left hover:bg-gray-100 hover:ring-1 hover:ring-gray-100 sm:rounded-3xl"
           >
             <div
-              class="basis-60 bg-[url('./assets/images/product-3.jpg')] bg-center bg-cover rounded-3xl"
+              class="basis-60 rounded-3xl bg-[url('./assets/images/product-3.jpg')] bg-cover bg-center"
             ></div>
-            <h3 class="font-semibold text-lg">Glasses</h3>
+            <h3 class="text-lg font-semibold">Glasses</h3>
             <small class="text-sm font-light text-gray-400">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               corporis.
@@ -132,12 +166,12 @@
             <strong>$45</strong>
           </article>
           <article
-            class="basis-60 flex flex-col gap-y-2 text-left hover:ring-1 hover:ring-gray-100 hover:bg-gray-100 p-4 rounded-3xl cursor-pointer"
+            class="flex basis-60 cursor-pointer flex-col gap-y-2 p-4 text-left hover:bg-gray-100 hover:ring-1 hover:ring-gray-100 sm:rounded-3xl"
           >
             <div
-              class="basis-60 bg-[url('./assets/images/product-4.jpg')] bg-center bg-cover rounded-3xl"
+              class="basis-60 rounded-3xl bg-[url('./assets/images/product-4.jpg')] bg-cover bg-center"
             ></div>
-            <h3 class="font-semibold text-lg">Shoes</h3>
+            <h3 class="text-lg font-semibold">Shoes</h3>
             <small class="text-sm font-light text-gray-400">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               corporis.
@@ -145,12 +179,12 @@
             <strong>$45</strong>
           </article>
           <article
-            class="basis-60 flex flex-col gap-y-2 text-left hover:ring-1 hover:ring-gray-100 hover:bg-gray-100 p-4 rounded-3xl cursor-pointer"
+            class="flex basis-60 cursor-pointer flex-col gap-y-2 p-4 text-left hover:bg-gray-100 hover:ring-1 hover:ring-gray-100 sm:rounded-3xl"
           >
             <div
-              class="basis-60 bg-[url('./assets/images/product-5.jpg')] bg-center bg-cover rounded-3xl"
+              class="basis-60 rounded-3xl bg-[url('./assets/images/product-5.jpg')] bg-cover bg-center"
             ></div>
-            <h3 class="font-semibold text-lg">Clock</h3>
+            <h3 class="text-lg font-semibold">Clock</h3>
             <small class="text-sm font-light text-gray-400">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               corporis.
@@ -158,12 +192,12 @@
             <strong>$45</strong>
           </article>
           <article
-            class="basis-60 flex flex-col gap-y-2 text-left hover:ring-1 hover:ring-gray-100 hover:bg-gray-100 p-4 rounded-3xl cursor-pointer"
+            class="flex basis-60 cursor-pointer flex-col gap-y-2 p-4 text-left hover:bg-gray-100 hover:ring-1 hover:ring-gray-100 sm:rounded-3xl"
           >
             <div
-              class="basis-60 bg-[url('./assets/images/product-6.jpg')] bg-center bg-cover rounded-3xl"
+              class="basis-60 rounded-3xl bg-[url('./assets/images/product-6.jpg')] bg-cover bg-center"
             ></div>
-            <h3 class="font-semibold text-lg">Pants</h3>
+            <h3 class="text-lg font-semibold">Pants</h3>
             <small class="text-sm font-light text-gray-400">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
               corporis.
@@ -172,65 +206,68 @@
           </article>
         </ul>
       </section>
-      <section class="text-center mb-32">
+      <section class="mb-16 text-center md:mb-32">
         <div
-          class="bg-[url('./assets/images/wedding.png')] h-96 bg-cover bg-center rounded-3xl shadow-lg content-end items-end flex justify-between p-6 mb-6"
+          class="mb-6 flex h-96 content-end items-end justify-between bg-[url('./assets/images/wedding.png')] bg-cover bg-center p-6 shadow-lg md:rounded-3xl"
         ></div>
-        <h2 class="text-3xl font-light mb-6">WEAR TO WEDDING</h2>
-        <p class="text-gray-400 text-sm mb-6">
+        <h2 class="mb-6 text-3xl font-light">WEAR TO WEDDING</h2>
+        <p class="mb-6 text-sm text-gray-400 max-md:px-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
           molestias.
         </p>
         <button
-          class="py-2 px-8 block cursor-pointer bg-black text-white rounded-full justify-self-center mt-6"
+          class="mt-6 block cursor-pointer justify-self-center rounded-full bg-black px-8 py-2 text-white"
         >
           See details
         </button>
       </section>
-      <section class="mb-32 flex justify-center">
-        <ul class="flex flex-row gap-x-4 justify-center" style="width: 1200px">
+      <section class="mb-16 flex justify-center md:mb-32">
+        <ul
+          class="flex flex-col justify-center gap-x-4 max-md:px-2 md:flex-row"
+          style="width: 1200px"
+        >
           <article class="basis-1/4 cursor-pointer">
             <div
-              class="bg-[url('./assets/images/man.jpg')] h-96 bg-cover bg-top rounded-3xl shadow-lg p-6 mb-6 flex flex-col justify-end relative"
+              class="relative mb-6 flex h-96 flex-col justify-end rounded-3xl bg-[url('./assets/images/man.jpg')] bg-cover bg-top p-6 shadow-lg"
             >
               <div class="">
-                <h2 class="text-4xl text-white font-bold mb-6">Men</h2>
-                <button class="bg-white text-black py-2 px-6 rounded-full">
+                <h2 class="mb-6 text-4xl font-bold text-white">Men</h2>
+                <button class="rounded-full bg-white px-6 py-2 text-black">
                   See details
                 </button>
               </div>
               <div
-                class="bg-gray-700/15 h-96 w-90 absolute z-10 top-0 left-0 w-full rounded-3xl hover:opacity-0 transition-opacity"
+                class="w-90 absolute left-0 top-0 z-10 h-96 w-full rounded-3xl bg-gray-700/15 transition-opacity hover:opacity-0"
               ></div>
             </div>
           </article>
           <article class="basis-1/4 cursor-pointer">
             <div
-              class="bg-[url('./assets/images/woman.jpg')] h-96 bg-cover bg-top rounded-3xl shadow-lg p-6 mb-6 flex flex-col justify-end relative"
+              class="relative mb-6 flex h-96 flex-col justify-end rounded-3xl bg-[url('./assets/images/woman.jpg')] bg-cover bg-top p-6 shadow-lg"
             >
               <div class="">
-                <h2 class="text-4xl text-white font-bold mb-6">Women</h2>
-                <button class="bg-white text-black py-2 px-6 rounded-full">
+                <h2 class="mb-6 text-4xl font-bold text-white">Women</h2>
+                <button class="rounded-full bg-white px-6 py-2 text-black">
                   See details
                 </button>
               </div>
               <div
-                class="bg-gray-700/15 h-96 w-90 absolute z-10 top-0 left-0 w-full rounded-3xl hover:opacity-0 transition-opacity"
+                class="w-90 absolute left-0 top-0 z-10 h-96 w-full rounded-3xl bg-gray-700/15 transition-opacity hover:opacity-0"
               ></div>
             </div>
           </article>
           <article class="basis-1/4 cursor-pointer">
             <div
-              class="bg-[url('./assets/images/kids.jpg')] h-96 bg-cover bg-top rounded-3xl shadow-lg p-6 mb-6 flex flex-col justify-end relative"
+              class="relative mb-6 flex h-96 flex-col justify-end rounded-3xl bg-[url('./assets/images/kids.jpg')] bg-cover bg-top p-6 shadow-lg"
             >
               <div class="">
-                <h2 class="text-4xl text-white font-bold mb-6">Kids</h2>
-                <button class="bg-white text-black py-2 px-6 rounded-full">
+                <h2 class="mb-6 text-4xl font-bold text-white">Kids</h2>
+                <button class="rounded-full bg-white px-6 py-2 text-black">
                   See details
                 </button>
               </div>
               <div
-                class="bg-gray-700/15 h-96 w-90 absolute z-10 top-0 left-0 w-full rounded-3xl hover:opacity-0 transition-opacity"
+                class="w-90 absolute left-0 top-0 z-10 h-96 w-full rounded-3xl bg-gray-700/15 transition-opacity hover:opacity-0"
               ></div>
             </div>
           </article>
@@ -238,65 +275,80 @@
       </section>
       <footer>
         <hr class="mb-6" />
-        <div class="flex h-60 justify-between content-start">
-          <div class="flex flex-col gap-y-4 basis-1/2">
-            <h3 class="font-bold text-2xl">Diane</h3>
-            <p class="text-gray-400 text-sm">
+        <div
+          class="flex flex-col content-start justify-between max-md:px-6 md:h-60 md:flex-row"
+        >
+          <div class="flex basis-1/2 flex-col gap-y-4 max-md:mb-6">
+            <h3 class="text-2xl font-bold">Diane</h3>
+            <p class="text-sm text-gray-400">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             <div>
               <input
                 type="email"
                 placeholder="Your email"
-                class="border rounded-full py-2 px-4 mr-2"
+                class="mr-2 rounded-full border px-4 py-2"
               />
               <button
                 type="submit"
-                class="rounded-full bg-black text-white py-2 px-8"
+                class="rounded-full bg-black px-8 py-2 text-white"
               >
                 Submit
               </button>
             </div>
           </div>
-          <div>
-            <h3 class="font-semibold text-base mb-3">Category</h3>
+          <div class="flex basis-1/2 flex-col max-md:mb-6">
+            <h3 class="mb-3 text-base font-semibold">Category</h3>
             <ul>
-              <li class="text-gray-400 text-sm">Link</li>
-              <li class="text-gray-400 text-sm">Link</li>
-              <li class="text-gray-400 text-sm">Link</li>
-              <li class="text-gray-400 text-sm">Link</li>
-              <li class="text-gray-400 text-sm">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
             </ul>
           </div>
-          <div>
-            <h3 class="font-semibold text-base mb-3">Product</h3>
+          <div class="flex basis-1/2 flex-col max-md:mb-6">
+            <h3 class="mb-3 text-base font-semibold">Product</h3>
             <ul>
-              <li class="text-gray-400 text-sm">Link</li>
-              <li class="text-gray-400 text-sm">Link</li>
-              <li class="text-gray-400 text-sm">Link</li>
-              <li class="text-gray-400 text-sm">Link</li>
-              <li class="text-gray-400 text-sm">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
             </ul>
           </div>
-          <div>
-            <h3 class="font-semibold text-base mb-3">Social Media</h3>
+          <div class="flex basis-1/2 flex-col max-md:mb-6">
+            <h3 class="mb-3 text-base font-semibold">Social Media</h3>
             <ul>
-              <li class="text-gray-400 text-sm">Link</li>
-              <li class="text-gray-400 text-sm">Link</li>
-              <li class="text-gray-400 text-sm">Link</li>
-              <li class="text-gray-400 text-sm">Link</li>
-              <li class="text-gray-400 text-sm">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
+              <li class="text-sm text-gray-400">Link</li>
             </ul>
           </div>
         </div>
       </footer>
     </div>
-    <div class="text-xs bg-black text-white p-2 flex justify-between">
-      <p>Copyrigth &copy; 2021. All rights reserved. Designed by Dyma</p>
-      <ul class="flex gap-x-2">
+    <div
+      class="flex flex-col justify-between bg-black p-2 text-xs text-white md:flex-row"
+    >
+      <p class="max-md:my-2">
+        Copyrigth &copy; 2021. All rights reserved. Designed by Dyma
+      </p>
+      <ul class="flex flex-col gap-x-2 max-md:gap-y-2 md:flex-row">
         <li class="cursor-pointer">Terms of Service</li>
         <li class="cursor-pointer">Privacy Policy</li>
       </ul>
     </div>
+    <script>
+      const menuIcon = document.getElementById("menuIcon");
+      const menu = document.getElementById("menu");
+      menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        menuIcon.children[0].classList.toggle("!hidden");
+        menuIcon.children[1].classList.toggle("!hidden");
+      });
+    </script>
   </body>
 </html>
